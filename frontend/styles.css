@@ -1,0 +1,151 @@
+/* DARK THEME */
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* MUNICH RE HEADING */
+.munich-re-title {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #004477; /* Munich RE blue */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px; /* Creates space below */
+}
+
+/* CHAT CONTAINER */
+.chat-container {
+    width: 50%; /* Middle 2/4 of the screen */
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    overflow: hidden;
+}
+
+/* MESSAGES SECTION */
+.messages {
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 10px;
+    scrollbar-width: thin;
+}
+
+/* MESSAGE BUBBLES */
+.message {
+    padding: 14px 18px;
+    border-radius: 15px;
+    margin: 12px 0;
+    max-width: 75%;
+    word-wrap: break-word;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+    line-height: 1.5;
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* BOT (LLM) MESSAGES */
+.bot {
+    color: #ddd;
+    align-self: flex-start;
+    padding: 5px 0;
+}
+
+/* USER MESSAGES */
+.user {
+    background: #404341;
+    color: white;
+    align-self: flex-end;
+}
+
+/* INPUT SECTION - CLEAN & ALIGNED */
+.input-container {
+    display: flex;
+    align-items: center;
+    background: #333;
+    padding: 10px;
+    border-radius: 30px;
+    position: sticky;
+    bottom: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* FILE UPLOAD BUTTON - WHITE CIRCLE WITH BLACK + */
+.upload-btn {
+    background: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-right: 8px;
+}
+
+.upload-btn i {
+    font-size: 20px;
+    color: black;
+}
+
+.upload-btn:hover {
+    background: #ddd;
+}
+
+/* TEXT INPUT */
+input {
+    flex: 1;
+    padding: 15px;
+    font-size: 16px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    margin-left: 8px;
+}
+
+/* SEND BUTTON - WHITE CIRCLE WITH BLACK UP ARROW */
+#sendBtn {
+    background: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: 8px;
+}
+
+#sendBtn i {
+    font-size: 20px;
+    color: black;
+}
+
+#sendBtn:hover {
+    background: #ddd;
+}
